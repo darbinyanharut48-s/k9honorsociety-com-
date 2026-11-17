@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240" role="img" aria-labelledby="t"><title id="t">The Canine Honor Society logo</title><defs><clipPath id="m-disc"><circle cx="120" cy="120" r="108"/></clipPath></defs>
+<circle cx="120" cy="120" r="114" fill="#C9A227"/>
+<circle cx="120" cy="120" r="108" fill="#F5F1E8"/>
+<g clip-path="url(#m-disc)"><g transform="translate(-6 -8) translate(129 140) scale(1.08) translate(-129 -140)">
+  <!-- head, neck and chest (rounded muzzle with a proper lower jaw) -->
+  <path fill="#0A1F44" d="M66 250C66 204 62 166 68 128C72 100 82 82 98 70C112 60 132 62 144 76C150 83 156 89 168 90C182 91 194 97 196 110C197 120 192 128 185 133C178 139 166 143 155 147C146 151 142 160 145 172C149 183 153 205 154 250Z"/>
+  <!-- floppy ear -->
+  <path fill="#1D3F82" d="M99 72C128 64 144 92 135 124C130 141 113 146 105 131C95 114 90 88 99 72Z"/>
+  <!-- eye -->
+  <circle cx="145" cy="98" r="5.2" fill="#F5F1E8"/>
+  <circle cx="146.2" cy="98.4" r="2.9" fill="#0A1F44"/>
+  <circle cx="147.2" cy="97.2" r="1" fill="#F5F1E8"/>
+  <!-- nose shine and a gentle smile -->
+  <ellipse cx="186" cy="101.5" rx="4.6" ry="2.7" transform="rotate(-16 186 101.5)" fill="#3F5FA0"/>
+  <path d="M191 123C181 129 167 129 157 121" fill="none" stroke="#F5F1E8" stroke-width="2.6" stroke-linecap="round"/>
+  <!-- bandana -->
+  <path fill="#B22234" d="M60 148C86 160 122 164 156 154L132 200C124 214 108 222 94 208L60 148Z"/>
+  <path fill="#8F1B29" d="M60 148C86 160 122 164 156 154L154 158C120 170 86 166 62 153Z"/>
+  <polygon fill="#F5F1E8" transform="translate(112 184) scale(.19) translate(-50 -53)" points="50.00,5.00 60.78,38.17 95.65,38.17 67.44,58.67 78.21,91.83 50.00,71.33 21.79,91.83 32.56,58.67 4.35,38.17 39.22,38.17"/>
+</g></g></svg>

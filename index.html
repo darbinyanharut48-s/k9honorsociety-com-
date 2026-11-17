@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ===================== SEO ===================== -->
+  <title>K9 Honor Society | Canine Companions for Veterans &amp; Law Enforcement</title>
+  <meta name="description" content="K9 Honor Society is a nonprofit uniting U.S. military veterans and law enforcement officers with vetted, purpose-trained canine companions. Loyalty, trust, and lifelong support for those who served.">
+  <meta name="author" content="K9 Honor Society">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#0A1F44">
+  <link rel="canonical" href="https://k9honorsociety.com/">
+
+  <!-- Favicon: the "K9" from the logo -->
+  <link rel="icon" href="favicon.png" type="image/png" sizes="64x64">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <!-- ===================== Open Graph / Twitter ===================== -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="K9 Honor Society">
+  <meta property="og:title" content="K9 Honor Society | Serving Those Who Served.">
+  <meta property="og:description" content="Uniting U.S. military veterans and law enforcement officers with vetted, purpose-trained canine companions. Loyalty, trust, and partnership for those who served.">
+  <meta property="og:url" content="https://k9honorsociety.com/">
+  <meta property="og:locale" content="en_US">
+  <!-- TODO(IMAGE): Replace this placeholder (Unsplash) with a branded 1200x630 share image hosted on your own domain,
+       e.g. https://k9honorsociety.com/images/og-share.jpg -->
+  <meta property="og:image" content="https://images.unsplash.com/photo-1618420138990-25842589a7c4?auto=format&amp;fit=crop&amp;w=1200&amp;h=630&amp;q=75">
+  <meta property="og:image:alt" content="An American flag flying against a sunset sky">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="K9 Honor Society | Serving Those Who Served.">
+  <meta name="twitter:description" content="Uniting U.S. military veterans and law enforcement officers with vetted, purpose-trained canine companions.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1618420138990-25842589a7c4?auto=format&amp;fit=crop&amp;w=1200&amp;h=630&amp;q=75">
+
+  <!-- ===================== JSON-LD (schema.org NGO) =====================
+       TODO: when social profiles exist, add "sameAs": [...]. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NGO",
+    "name": "K9 Honor Society",
+    "url": "https://k9honorsociety.com",
+    "logo": "https://k9honorsociety.com/images/logo.png",
+    "description": "A nonprofit uniting U.S. military veterans and law enforcement officers with vetted, purpose-trained canine companions.",
+    "slogan": "Serving Those Who Served.",
+    "foundingDate": "2026",
+    "email": "help@k9honorsociety.com",
+    "telephone": "+1-818-532-8282",
+    "areaServed": { "@type": "Country", "name": "United States" },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "name": "Voskan Azaryan",
+      "contactType": "customer support",
+      "telephone": "+1-818-532-8282",
+      "email": "help@k9honorsociety.com",
+      "areaServed": "US",
+      "availableLanguage": "English"
+    }
+  }
+  </script>
+
+  <!-- ===================== Fonts ===================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Oswald:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,500&amp;display=swap" rel="stylesheet">
+
+  <!-- Flag the document as JS-enabled early so scroll-reveal never hides content for no-JS visitors -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <!-- ===================== Tailwind CSS (CDN) =====================
+       Fine for launch. For maximum speed later, compile Tailwind once and replace this tag (see README). -->
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy:      { DEFAULT: '#0A1F44', 950: '#06132B', 900: '#071633', 700: '#12306A' },
+            glory:     { DEFAULT: '#B22234', dark: '#8F1B29' },
+            parchment: { DEFAULT: '#F5F1E8' },
+            ink:       { DEFAULT: '#1A2740', soft: '#3B4760' },
+            brass:     { DEFAULT: '#C9A227', light: '#E2C458', dark: '#7A5F08' }
+          },
+          fontFamily: {
+            display: ['Oswald', 'Impact', '"Arial Narrow"', 'sans-serif'],
+            serif:   ['"Playfair Display"', 'Georgia', 'serif'],
+            sans:    ['Inter', 'system-ui', '-apple-system', '"Segoe UI"', 'Roboto', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Custom styles (patriotic textures, soft promise cards, gratitude, timeline, forms) -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-white font-sans text-navy antialiased">
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- =====================================================================
+       SVG SPRITE — crest logo, stars and icons, defined once and reused with <use>.
+       The crest is an ORIGINAL design (no official military/police/government insignia).
+       ===================================================================== -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true" focusable="false">
+
+    <!-- Five-point star -->
+    <symbol id="i-star" viewBox="0 0 100 100"><polygon points="50.00,5.00 60.78,38.17 95.65,38.17 67.44,58.67 78.21,91.83 50.00,71.33 21.79,91.83 32.56,58.67 4.35,38.17 39.22,38.17"/></symbol>
+
+    <!-- UI icons (24x24, stroke style) -->
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></symbol>
+    <symbol id="i-chev-left" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></symbol>
+    <symbol id="i-chev-right" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></symbol>
+    <symbol id="i-chev-up" viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></symbol>
+    <symbol id="i-chev-down" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><line x1="8" y1="5" x2="8" y2="19"/><line x1="16" y1="5" x2="16" y2="19"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><polygon points="7 4 20 12 7 20 7 4"/></symbol>
+
+    <!-- "Who we serve" icons -->
+    <symbol id="i-flag-star" viewBox="0 0 24 24">
+      <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/>
+      <use href="#i-star" x="5.6" y="4.4" width="5" height="5" fill="currentColor" stroke="none"/>
+    </symbol>
+    <symbol id="i-shield-star" viewBox="0 0 24 24">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      <use href="#i-star" x="8.5" y="7.6" width="7" height="7" fill="currentColor" stroke="none"/>
+    </symbol>
+
+    <!-- Soft icons for the "Our Promise" section (54x54, rounded shapes) -->
+    <symbol id="p-paw" viewBox="0 0 54 54">
+      <ellipse cx="13" cy="23" rx="4.6" ry="6" transform="rotate(-22 13 23)"/>
+      <ellipse cx="21.5" cy="13.5" rx="4.6" ry="6.2" transform="rotate(-8 21.5 13.5)"/>
+      <ellipse cx="32.5" cy="13.5" rx="4.6" ry="6.2" transform="rotate(8 32.5 13.5)"/>
+      <ellipse cx="41" cy="23" rx="4.6" ry="6" transform="rotate(22 41 23)"/>
+      <path d="M27 25c-6.4 0-12.5 6.4-12.5 11.6 0 4.2 3.2 6.2 7.2 5.2 1.9-.5 3.6-1.1 5.3-1.1s3.4.6 5.3 1.1c4 1 7.2-1 7.2-5.2C39.5 31.400 33.400 25 27 25z"/>
+    </symbol>
+    <symbol id="p-heart" viewBox="0 0 54 54">
+      <path d="M27 44.500C15.500 37 8.500 30.500 8.500 22.500 8.500 17 12.600 13 17.700 13c3.700 0 7 2 9.300 5.600C29.300 15 32.600 13 36.300 13 41.400 13 45.500 17 45.500 22.500 45.500 30.500 38.500 37 27 44.500z"/>
+    </symbol>
+    <symbol id="p-home" viewBox="0 0 54 54">
+      <path d="M27 9.500 8 25h4.500v16.500a3 3 0 0 0 3 3h23a3 3 0 0 0 3-3V25H46z"/>
+      <path fill="#F5E6B8" stroke="none" d="M27 39.500c-4.600-2.900-7.400-5.500-7.400-8.400 0-2 1.500-3.500 3.500-3.500 1.600 0 2.900.8 3.900 2.200 1-1.400 2.300-2.200 3.900-2.200 2 0 3.500 1.500 3.500 3.500 0 2.900-2.800 5.500-7.400 8.400z"/>
+    </symbol>
+    <symbol id="p-forever" viewBox="0 0 54 54">
+      <path d="M27 27c-3.500-5.500-6.500-8-10.500-8C11.500 19 8 22.500 8 27s3.500 8 8.500 8c4 0 7-2.500 10.500-8zm0 0c3.500 5.500 6.500 8 10.500 8 5 0 8.500-3.500 8.500-8s-3.500-8-8.500-8c-4 0-7 2.500-10.500 8z"/>
+      <path fill="#B22234" stroke="none" d="M27 31.200c-2.600-1.700-4.200-3.100-4.200-4.800 0-1.200.9-2 2-2 .9 0 1.700.5 2.200 1.300.5-.8 1.300-1.300 2.200-1.300 1.100 0 2 .8 2 2 0 1.700-1.600 3.100-4.200 4.800z"/>
+    </symbol>
+  </svg>
+
+  <!-- =====================================================================
+       1. TOP BAR + STICKY HEADER
+       ===================================================================== -->
+  <div class="dark-surface hidden bg-navy-950 text-[13px] text-white/90 md:block">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-2 lg:px-8">
+      <ul class="flex items-center gap-6" role="list">
+        <li>
+          <a href="tel:+18185328282" class="inline-flex items-center gap-2 hover:text-brass-light">
+            <svg class="icon h-4 w-4 text-brass" aria-hidden="true"><use href="#i-phone"/></svg>
+            <span>(818) 532-8282</span>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:help@k9honorsociety.com" class="inline-flex items-center gap-2 hover:text-brass-light">
+            <svg class="icon h-4 w-4 text-brass" aria-hidden="true"><use href="#i-mail"/></svg>
+            <span>help@k9honorsociety.com</span>
+          </a>
+        </li>
+      </ul>
+      <p class="hidden font-display text-xs uppercase tracking-[.25em] text-brass lg:block" aria-hidden="true">Veterans &nbsp;&bull;&nbsp; Law Enforcement &nbsp;&bull;&nbsp; Lifelong Partners</p>
+    </div>
+  </div>
+
+  <header id="site-header" class="site-header sticky top-0 z-50 border-b-2 border-brass bg-white text-navy">
+    <div class="mx-auto flex h-[76px] max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+
+      <!-- Logo: the emblem from the chosen artwork + the name as live text in the logo's colours.
+           (The complete logo is images/logo.webp, used in the footer.) -->
+      <a href="#home" class="brand flex items-center gap-3" aria-label="K9 Honor Society, home">
+        <img src="images/logo-emblem.webp" width="480" height="360" alt="" class="h-14 w-auto shrink-0">
+        <span class="brand-word" aria-hidden="true"><span class="brand-k9">K9</span><span class="brand-name">Honor<br>Society</span></span>
+      </a>
+
+      <!-- Desktop navigation -->
+      <nav aria-label="Primary" class="hidden xl:block">
+        <ul class="flex items-center gap-7 font-display text-[15px] uppercase tracking-[.14em]" role="list">
+          <li><a class="nav-link" href="#home">Home</a></li>
+          <li><a class="nav-link" href="#mission">Our Mission</a></li>
+          <li><a class="nav-link" href="#how-it-works">How It Works</a></li>
+          <li><a class="nav-link" href="#programs">Programs</a></li>
+          <li><a class="nav-link" href="#stories">Stories</a></li>
+          <li><a class="nav-link" href="#support">Support Us</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="#contact" class="btn btn-red btn-sm hidden md:inline-flex">Apply for a Companion</a>
+        <!-- Hamburger (below 1280px) -->
+        <button type="button" id="menu-toggle" class="menu-toggle grid h-12 w-12 place-items-center border-2 border-brass/70 text-navy hover:border-brass xl:hidden"
+                aria-expanded="false" aria-controls="mobile-menu" aria-label="Main menu">
+          <svg class="icon icon-open h-6 w-6" aria-hidden="true"><use href="#i-menu"/></svg>
+          <svg class="icon icon-close h-6 w-6" aria-hidden="true"><use href="#i-close"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile / tablet menu -->
+    <div id="mobile-menu" class="mobile-menu xl:hidden">
+      <nav aria-label="Mobile" class="mx-auto max-w-7xl px-4 pb-6 pt-2 sm:px-6">
+        <ul role="list">
+          <li><a class="mobile-link" href="#home">Home</a></li>
+          <li><a class="mobile-link" href="#mission">Our Mission</a></li>
+          <li><a class="mobile-link" href="#how-it-works">How It Works</a></li>
+          <li><a class="mobile-link" href="#programs">Programs</a></li>
+          <li><a class="mobile-link" href="#stories">Stories</a></li>
+          <li><a class="mobile-link" href="#support">Support Us</a></li>
+          <li><a class="mobile-link" href="#contact">Contact</a></li>
+        </ul>
+        <a href="#contact" class="btn btn-red mt-6 w-full">Apply for a Companion</a>
+        <p class="mt-5 flex flex-col gap-2 text-sm text-navy">
+          <a href="tel:+18185328282" class="inline-flex items-center gap-2"><svg class="icon h-4 w-4 text-brass" aria-hidden="true"><use href="#i-phone"/></svg>(818) 532-8282</a>
+          <a href="mailto:help@k9honorsociety.com" class="inline-flex items-center gap-2"><svg class="icon h-4 w-4 text-brass" aria-hidden="true"><use href="#i-mail"/></svg>help@k9honorsociety.com</a>
+        </p>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- =====================================================================
+         2. HERO
+         ===================================================================== -->
+    <section id="home" class="hero dark-surface relative isolate flex items-center overflow-hidden bg-navy-900 text-white" aria-labelledby="hero-title">
+      <!-- HERO BACKGROUND: photo supplied by the client (images/hero.webp, 1672x941).
+           TODO(IMAGE): confirm you hold the rights and the person's written permission to publish it. For the sharpest result on very large screens, supply a 1920px-wide (or larger) version.
+           The subjects sit on the right so the headline can sit over the dark left side; the crop is set by object-position in .hero-bg (styles.css).
+           Decorative image, so alt is intentionally empty. -->
+      <img class="hero-bg absolute left-0 top-[-8%] -z-20 h-[116%] w-full object-cover" data-parallax
+           src="images/hero.webp" width="1672" height="941" alt="" fetchpriority="high">
+      <div class="hero-overlay absolute inset-0 -z-10" aria-hidden="true"></div>
+      <div class="bg-stars absolute inset-0 -z-10 opacity-60" aria-hidden="true"></div>
+      <div class="flag-wave" aria-hidden="true"></div>
+
+      <div class="relative mx-auto w-full max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
+        <div class="max-w-3xl">
+          <div class="star-divider star-divider--left reveal" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#i-star"/></svg></div>
+          <p class="eyebrow eyebrow-light reveal mt-6" style="--d:80ms">★ HONORING THOSE WHO SERVED ★</p>
+          <h1 id="hero-title" class="hero-title heading heading-light reveal mt-5" style="--d:160ms">
+            Serving Those <span class="block text-brass">Who Served.</span>
+          </h1>
+          <p class="reveal mt-7 max-w-2xl text-lg leading-relaxed text-white/90 sm:text-xl" style="--d:260ms">
+            K9 Honor Society connects military veterans and law enforcement officers with loyal, carefully matched canine companions built for life beyond the line of duty.
+          </p>
+          <div class="reveal mt-10 flex flex-col gap-4 sm:flex-row" style="--d:360ms">
+            <a href="#contact" class="btn btn-red">Apply for a Companion</a>
+            <a href="#support" class="btn btn-outline">Support Our Mission</a>
+          </div>
+        </div>
+      </div>
+
+      <a href="#mission" class="scroll-cue" aria-label="Scroll to Our Mission">
+        <svg class="icon h-8 w-8" aria-hidden="true"><use href="#i-chev-down"/></svg>
+      </a>
+    </section>
+
+    <!-- =====================================================================
+         3. OUR MISSION
+         ===================================================================== -->
+    <section id="mission" class="bg-stars-light relative bg-parchment py-20 sm:py-28" aria-labelledby="mission-title">
+      <div class="mx-auto grid max-w-7xl items-center gap-16 px-4 sm:px-6 lg:grid-cols-2 lg:gap-24 lg:px-8">
+        <div class="reveal">
+          <p class="eyebrow">Who We Are</p>
+          <h2 id="mission-title" class="heading mt-3 text-4xl sm:text-5xl">Our Mission</h2>
+          <div class="star-divider star-divider--left mt-6" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#i-star"/></svg></div>
+          <p class="lead-serif mt-8 text-lg text-ink sm:text-xl">
+            K9 Honor Society is committed to supporting military veterans and law enforcement officers by uniting them with exceptional four-legged companions. We believe the transition from active service—and the weight carried after the badge or uniform comes off—should never be navigated alone. Through careful temperament matching, structured preparation, and dedicated placement, we build lasting partnerships grounded in loyalty, purpose, and mutual trust.
+          </p>
+        </div>
+
+        <figure class="frame-gold reveal mx-auto w-full max-w-md lg:max-w-none" style="--d:140ms">
+          <!-- MISSION PHOTO — supplied by the client (images/mission.webp, 1672x941; images/mission-800.webp is the phone-size copy).
+               TODO(IMAGE): confirm you hold the rights to publish this photo. If it is replaced, keep both files in sync or delete the srcset. -->
+          <img src="images/mission.webp"
+               srcset="images/mission-800.webp 800w, images/mission.webp 1672w"
+               sizes="(min-width:1024px) 45vw, 92vw" width="1672" height="941" loading="lazy" decoding="async"
+               alt="A man in a dark sweater relaxes in a rocking chair on a porch, resting his hand on a Belgian Malinois lying beside him, with a police cap on the table and an American flag hanging behind them">
+          <span class="absolute -bottom-7 -right-3 grid h-24 w-24 place-items-center rounded-full bg-white shadow-xl ring-2 ring-brass/70 sm:-right-6 sm:h-28 sm:w-28" aria-hidden="true"><img src="images/logo-emblem.webp" width="480" height="360" alt="" class="h-14 w-auto sm:h-16" loading="lazy"></span>
+        </figure>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         3b. FRIENDS FOR LIFE — three photo rows that drift in opposite directions
+         Photos are the client's own, pre-cropped to images/tile-*.webp (560x400). The headline words sit inside the rows
+         and travel with them. Each row repeats one cycle 4 times for a seamless loop (copies 2-4 are aria-hidden).
+         TODO(IMAGE): confirm you hold the rights and each person's permission to publish these photos.
+         ===================================================================== -->
+    <section id="friends" data-nav="mission" data-marquee class="marquee-bg dark-surface relative overflow-hidden py-20 text-white sm:py-28" aria-labelledby="friends-title">
+      <h2 id="friends-title" class="sr-only">Friends for life.</h2>
+      <p class="eyebrow eyebrow-light reveal px-4 text-center">Real Friendships, Every Day</p>
+
+      <div class="marquee-rows mt-10" role="group" aria-label="Photos of veterans and officers with their dogs">
+          <div class="marquee-row">
+            <div class="marquee-track marquee-track--right" style="--dur:56s">
+              <div class="marquee-cycle"><span class="marquee-tile"><img src="images/tile-hero.webp" width="560" height="400" loading="lazy" decoding="async" alt="A man gently hugging his German Shepherd while an American flag flies behind them"></span><span class="marquee-word" aria-hidden="true">Friends</span><span class="marquee-tile"><img src="images/tile-marcus.webp" width="560" height="400" loading="lazy" decoding="async" alt="Marcus smiling as he pets his golden retriever, Cooper"></span><span class="marquee-tile"><img src="images/tile-officer.webp" width="560" height="400" loading="lazy" decoding="async" alt="A police officer on a walk with his Australian Shepherd"></span></div>
+              <div class="marquee-cycle" aria-hidden="true"><span class="marquee-tile"><img src="images/tile-hero.webp" width="560" height="400" loading="lazy" decoding="async" alt=""></span><span class="marquee-word" aria-hidden="true">Friends</span><span class="marquee-tile"><img src="images/tile-marcus.webp" width="560" height="400" loading="lazy" decoding="async" alt=""></span><span class="marquee-tile"><img src="images/tile-officer.webp" width="560" height="400" loading="lazy" decoding="async" alt=""></span></div>
+              <div class="marquee-cycle" aria-hidden="true"><span class="marquee-tile"><img src="images/tile-hero.webp" width="560" height="400" loading="lazy" decoding="async" alt=""></span><span class="marquee-word" aria-hidden="true">Friends</span><span class="marquee-tile"><img src="images/tile-marcus.webp" width="560" height="400" loading="lazy" decoding="async" alt=""></span><span class="marquee-tile"><img src="images/tile-officer.webp" width="560" height="400" loading="lazy" decoding="async" alt=""></span></div>
+              <div class="marquee-cycle" aria-hidden="true"><span class="marquee-tile"><img src="images/tile-hero.webp" width="560" height="400" loading="lazy" decoding="async" alt=""></span><span class="marquee-word" aria-hidden="true">Friends</span><span class="marquee-tile"><img src="images/tile-marcus.webp" width="560" height="400" loading="lazy" decoding="async" alt=""></span><span class="marquee-tile"><img src="images/tile-officer.webp" width="560" height="400" loading="lazy" decoding="async" alt=""></span></div>
+            </div>
+          </div>
+          <div class="marquee-row">
+            <div class="marquee-track marquee-track--left" style="--dur:48s">
+              <div class="marquee-cycle"><span class="marquee-tile"><img src="images/tile-rebecca.webp" width="560" height="400" loading="lazy" decoding="async" alt="Rebecca kneeling beside her Australian Shepherd, Bailey"></span><span class="marquee-word" aria-hidden="true">For</span><span class="marquee-tile"><img src="images/tile-porch.webp" width="560" height="400" loading="lazy" decoding="async" alt="A man relaxing on a porch with his Belgian Malinois resting beside him"></span><span class="marquee-tile"><img src="images/tile-robert.webp" width="560" height="400" loading="lazy" decoding="async" alt="Robert with his arm around his yellow Labrador retriever"></span></div>
+              <div class="marquee-cycle" aria-hidden="true"><span class="marquee-tile"><img src="images/tile-rebecca.webp" width="560" height="400" loading="lazy" decoding="async" alt=""></span><span class="marquee-word" aria-hidden="true">For</span><span class="marquee-tile"><img src="images/tile-porch.webp" width="560" height="400" loading="lazy" decoding="async" alt=""></span><span class="marquee-tile"><img src="images/tile-robert.webp" width="560" height="400" loading="lazy" decoding="async" alt=""></span></div>
+              <div class="marquee-cycle" aria-hidden="true"><span class="marquee-tile"><img src="images/tile-rebecca.webp" width="560" height="400" loading="lazy" decoding="async" alt=""></span><span class="marquee-word" aria-hidden="true">For</span><span class="marquee-tile"><img src="images/tile-porch.webp" width="560" height="400" loading="lazy" decoding="async" alt=""></span><span class="marquee-tile"><img src="images/tile-robert.webp" width="560" height="400" loading="lazy" decoding="async" alt=""></span></div>
+              <div class="marquee-cycle" aria-hidden="true"><span class="marquee-tile"><img src="images/tile-rebecca.webp" width="560" height="400" loading="lazy" decoding="async" alt=""></span><span class="marquee-word" aria-hidden="true">For</span><span class="marquee-tile"><img src="images/tile-porch.webp" width="560" height="400" loading="lazy" decoding="async" alt=""></span><span class="marquee-tile"><img src="images/tile-robert.webp" width="560" height="400" loading="lazy" decoding="async" alt=""></span></div>
+            </div>
+          </div>
+          <div class="marquee-row">
+            <div class="marquee-track marquee-track--right" style="--dur:64s">
+              <div class="marquee-cycle"><span class="marquee-word marquee-word--gold" aria-hidden="true">Life.</span><span class="marquee-tile"><img src="images/tile-jasmine.webp" width="560" height="400" loading="lazy" decoding="async" alt="Jasmine laughing as her Belgian Malinois, Koda, stands up to greet her"></span><span class="marquee-tile"><img src="images/tile-park.webp" width="560" height="400" loading="lazy" decoding="async" alt="A woman hugging her black Labrador retriever in a sunny park"></span><span class="marquee-tile"><img src="images/tile-michael.webp" width="560" height="400" loading="lazy" decoding="async" alt="Michael smiling with his arm around Rex on a wooded trail"></span></div>
+              <div class="marquee-cycle" aria-hidden="true"><span class="marquee-word marquee-word--gold" aria-hidden="true">Life.</span><span class="marquee-tile"><img src="images/tile-jasmine.webp" width="560" height="400" loading="lazy" decoding="async" alt=""></span><span class="marquee-tile"><img src="images/tile-park.webp" width="560" height="400" loading="lazy" decoding="async" alt=""></span><span class="marquee-tile"><img src="images/tile-michael.webp" width="560" height="400" loading="lazy" decoding="async" alt=""></span></div>
+              <div class="marquee-cycle" aria-hidden="true"><span class="marquee-word marquee-word--gold" aria-hidden="true">Life.</span><span class="marquee-tile"><img src="images/tile-jasmine.webp" width="560" height="400" loading="lazy" decoding="async" alt=""></span><span class="marquee-tile"><img src="images/tile-park.webp" width="560" height="400" loading="lazy" decoding="async" alt=""></span><span class="marquee-tile"><img src="images/tile-michael.webp" width="560" height="400" loading="lazy" decoding="async" alt=""></span></div>
+              <div class="marquee-cycle" aria-hidden="true"><span class="marquee-word marquee-word--gold" aria-hidden="true">Life.</span><span class="marquee-tile"><img src="images/tile-jasmine.webp" width="560" height="400" loading="lazy" decoding="async" alt=""></span><span class="marquee-tile"><img src="images/tile-park.webp" width="560" height="400" loading="lazy" decoding="async" alt=""></span><span class="marquee-tile"><img src="images/tile-michael.webp" width="560" height="400" loading="lazy" decoding="async" alt=""></span></div>
+            </div>
+          </div>
+      </div>
+
+      <div class="relative mx-auto mt-12 flex max-w-7xl flex-col items-center gap-6 px-4 text-center sm:px-6 lg:px-8">
+        <p class="max-w-2xl text-lg leading-relaxed text-white/90">Friendships that begin with a simple conversation, and last a lifetime.</p>
+        <a href="#stories" class="btn btn-outline">Read Their Stories</a>
+        <button type="button" class="marquee-pause" data-marquee-toggle aria-pressed="false">
+          <svg class="icon i-pause h-4 w-4" aria-hidden="true"><use href="#i-pause"/></svg>
+          <svg class="icon i-play h-4 w-4" aria-hidden="true"><use href="#i-play"/></svg>
+          <span class="label">Pause motion</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         4. OUR PROMISE — soft, friendly "why a dog for life" section
+         (replaces the old medal-style Core Values; the four values are kept as a quiet line at the end)
+         ===================================================================== -->
+    <section id="promise" data-nav="mission" class="bg-paws relative overflow-hidden bg-white py-20 sm:py-28" aria-labelledby="promise-title">
+      <!-- Soft warm glows (decorative) -->
+      <div class="pointer-events-none absolute -left-32 top-10 h-80 w-80 rounded-full bg-brass/10 blur-3xl" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute -right-24 bottom-0 h-96 w-96 rounded-full bg-glory/5 blur-3xl" aria-hidden="true"></div>
+
+      <div class="relative mx-auto grid max-w-7xl items-start gap-14 px-4 sm:px-6 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-20 lg:px-8">
+
+        <!-- Left: the heart of our philosophy -->
+        <div class="reveal lg:sticky lg:top-28">
+          <p class="eyebrow">You Are Not Alone</p>
+          <h2 id="promise-title" class="heading-soft mt-4 text-4xl sm:text-5xl">After service, you don't have to walk alone.</h2>
+          <div class="star-divider star-divider--left mt-6" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#i-star"/></svg></div>
+
+          <p class="mt-7 text-lg leading-relaxed text-ink-soft">
+            K9 Honor Society helps <strong class="font-semibold text-navy">military veterans and law enforcement officers</strong>,
+            people who gave years of their lives to serving others, find a dog to share the rest of theirs with.
+            A loyal friend who is happy to see you every single day, through the easy days and the hard ones.
+          </p>
+
+          <blockquote class="promise-quote mt-8">
+            <p>No one who served should ever feel they are facing life alone.</p>
+          </blockquote>
+
+          <div class="mt-9 flex flex-col gap-5 sm:flex-row sm:items-center">
+            <a href="#contact" class="btn btn-red">Apply for a Companion</a>
+            <a href="#how-it-works" class="link-arrow">See how it works<svg class="icon h-5 w-5" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+
+          <p class="mt-10 flex flex-wrap items-center gap-x-3 gap-y-1 font-display text-xs uppercase tracking-[.24em] text-brass-dark">
+            <span>Built on</span><span>Loyalty</span><span aria-hidden="true">★</span><span>Trust</span><span aria-hidden="true">★</span><span>Purpose</span><span aria-hidden="true">★</span><span>Honor</span>
+          </p>
+        </div>
+
+        <!-- Right: four gentle promises -->
+        <ul class="promise-grid" role="list">
+          <li class="promise-card reveal">
+            <div class="promise-icon" aria-hidden="true">
+              <svg viewBox="0 0 54 54"><use href="#p-paw" fill="#0A1F44" stroke="#0A1F44" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>A friend who is always glad to see you</h3>
+            <p>Coming home from service can feel quiet. A loyal companion brings warmth, a daily rhythm, and a reason to smile back into every day.</p>
+          </li>
+
+          <li class="promise-card reveal" style="--d:120ms">
+            <div class="promise-icon" aria-hidden="true">
+              <svg viewBox="0 0 54 54"><use href="#p-heart" fill="#B22234" stroke="#B22234" stroke-width="2" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Chosen together, never just assigned</h3>
+            <p>You are not simply handed a dog. We get to know you, your home, your pace, and your hopes, then help you find the dog that feels like yours.</p>
+          </li>
+
+          <li class="promise-card reveal" style="--d:240ms">
+            <div class="promise-icon" aria-hidden="true">
+              <svg viewBox="0 0 54 54"><use href="#p-home" fill="#0A1F44" stroke="#0A1F44" stroke-width="2" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Ready for everyday life</h3>
+            <p>Every dog is carefully vetted and trained with purpose, and we help you both settle in together, so life at home feels natural from the very first day.</p>
+          </li>
+
+          <li class="promise-card reveal" style="--d:360ms">
+            <div class="promise-icon" aria-hidden="true">
+              <svg viewBox="0 0 54 54"><use href="#p-forever" fill="none" stroke="#0A1F44" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>By your side for life</h3>
+            <p>Placement day is only the beginning. We stay close with check-ins, answers, and encouragement for as long as you and your dog need us.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         5. HOW IT WORKS — 4-step timeline with numbered stars
+         ===================================================================== -->
+    <section id="how-it-works" class="bg-stars-light relative bg-parchment py-20 sm:py-28" aria-labelledby="how-title">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal text-center">
+          <p class="eyebrow">The Path to Partnership</p>
+          <h2 id="how-title" class="heading mt-3 text-4xl sm:text-5xl">How It Works</h2>
+          <div class="star-divider mt-6" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#i-star"/></svg></div>
+        </div>
+
+        <ol class="timeline mt-16" role="list">
+          <li class="timeline-step reveal">
+            <div class="step-star" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#i-star"/></svg><span>1</span></div>
+            <div>
+              <h3 class="heading text-2xl">Apply</h3>
+              <p class="mt-2 leading-relaxed text-ink-soft">Veterans and officers submit a simple application.</p>
+            </div>
+          </li>
+          <li class="timeline-step reveal" style="--d:120ms">
+            <div class="step-star" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#i-star"/></svg><span>2</span></div>
+            <div>
+              <h3 class="heading text-2xl">Match</h3>
+              <p class="mt-2 leading-relaxed text-ink-soft">We match temperament, lifestyle, and needs with a vetted canine.</p>
+            </div>
+          </li>
+          <li class="timeline-step reveal" style="--d:240ms">
+            <div class="step-star" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#i-star"/></svg><span>3</span></div>
+            <div>
+              <h3 class="heading text-2xl">Prepare</h3>
+              <p class="mt-2 leading-relaxed text-ink-soft">Structured training and preparation for both dog and handler.</p>
+            </div>
+          </li>
+          <li class="timeline-step reveal" style="--d:360ms">
+            <div class="step-star" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#i-star"/></svg><span>4</span></div>
+            <div>
+              <h3 class="heading text-2xl">Placement &amp; Support</h3>
+              <p class="mt-2 leading-relaxed text-ink-soft">Dedicated placement and ongoing lifelong support.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         6. WHO WE SERVE (nav: "Programs")
+         ===================================================================== -->
+    <section id="programs" class="relative bg-white py-20 sm:py-28" aria-labelledby="programs-title">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal text-center">
+          <p class="eyebrow">Our Programs</p>
+          <h2 id="programs-title" class="heading mt-3 text-4xl sm:text-5xl">Who We Serve</h2>
+          <div class="star-divider mt-6" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#i-star"/></svg></div>
+        </div>
+
+        <div class="mt-14 grid gap-10 lg:grid-cols-2">
+          <!-- Military Veterans -->
+          <article class="serve-card reveal">
+            <div class="serve-card__media">
+              <!-- Photo supplied by the client (images/card-veterans.webp, 1000x667; card-veterans-600.webp is the phone-size copy).
+                   TODO(IMAGE): confirm you hold the rights and the person's permission to publish it. Shown 16:10 (cropped to fit). -->
+              <img src="images/card-veterans.webp"
+                   srcset="images/card-veterans-600.webp 600w, images/card-veterans.webp 1000w"
+                   sizes="(min-width:1024px) 45vw, 92vw" width="1000" height="667" loading="lazy" decoding="async"
+                   alt="A smiling woman in an olive green t-shirt sits on the grass in a sunny park, hugging her black Labrador retriever as he rests his head against her cheek">
+            </div>
+            <div class="serve-card__badge" aria-hidden="true"><svg class="icon" style="stroke-width:1.6"><use href="#i-flag-star"/></svg></div>
+            <div class="flex flex-1 flex-col p-8 pt-6 sm:p-10 sm:pt-6">
+              <h3 class="heading text-3xl">Military Veterans</h3>
+              <p class="mt-4 flex-1 leading-relaxed text-ink-soft">You carried the mission. We help make sure you never carry what comes after alone. We unite military veterans with a carefully vetted, purpose-trained canine companion matched to your temperament, lifestyle, and needs, and we stand behind the partnership for life.</p>
+              <p class="mt-7"><a href="#contact" class="link-arrow" data-intent="serve-veteran">Learn More<span class="sr-only"> about our program for military veterans</span><svg class="icon h-5 w-5" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+            </div>
+          </article>
+
+          <!-- Law Enforcement Officers -->
+          <article class="serve-card reveal" style="--d:140ms">
+            <div class="serve-card__media">
+              <!-- Photo supplied by the client (images/card-officers.webp, 1000x747; card-officers-600.webp is the phone-size copy).
+                   TODO(IMAGE): confirm you hold the rights and the person's permission to publish it. Shown 16:10 (cropped to fit); the top is kept in view via object-position. -->
+              <img src="images/card-officers.webp"
+                   srcset="images/card-officers-600.webp 600w, images/card-officers.webp 1000w"
+                   sizes="(min-width:1024px) 45vw, 92vw" width="1000" height="747" loading="lazy" decoding="async"
+                   style="object-position: 50% 0%"
+                   alt="A smiling police officer in a dark blue uniform walks down a tree-lined street while his blue merle Australian Shepherd, on a leash, looks up at him">
+            </div>
+            <div class="serve-card__badge" aria-hidden="true"><svg class="icon" style="stroke-width:1.6"><use href="#i-shield-star"/></svg></div>
+            <div class="flex flex-1 flex-col p-8 pt-6 sm:p-10 sm:pt-6">
+              <h3 class="heading text-3xl">Law Enforcement Officers</h3>
+              <p class="mt-4 flex-1 leading-relaxed text-ink-soft">The weight of the badge doesn't come off with the uniform. We unite law enforcement officers with a loyal, vetted canine companion, prepared with care, matched to the person, and supported long after the placement is made.</p>
+              <p class="mt-7"><a href="#contact" class="link-arrow" data-intent="serve-leo">Learn More<span class="sr-only"> about our program for law enforcement officers</span><svg class="icon h-5 w-5" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         7. GRATITUDE — a quiet "thank you" to those who served
+         (replaces the old statistics cards; no placeholder numbers)
+         ===================================================================== -->
+    <section id="gratitude" data-nav="programs" class="tribute-soft relative overflow-hidden py-20 sm:py-28" aria-labelledby="gratitude-title">
+      <!-- Soft warm glows (decorative) -->
+      <div class="pointer-events-none absolute -right-28 top-24 h-80 w-80 rounded-full bg-brass/15 blur-3xl" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute -left-24 bottom-16 h-72 w-72 rounded-full bg-glory/5 blur-3xl" aria-hidden="true"></div>
+
+      <div class="relative mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
+        <div class="reveal">
+          <p class="eyebrow">With Gratitude</p>
+          <h2 id="gratitude-title" class="heading-soft mt-4 text-4xl sm:text-5xl lg:text-6xl">Thank you for your service.</h2>
+          <div class="star-divider mt-7" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#i-star"/></svg></div>
+
+          <p class="tribute-lead mx-auto mt-8 max-w-3xl">We value your service, and we are deeply grateful for everything you have done for your country.</p>
+          <p class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-ink-soft">
+            Whether you served in the military or wore a badge to protect your community, you gave years of your life to something bigger than yourself, and you carried that responsibility with honor.
+            Now we would be proud to carry something for you: a loyal friend who stays by your side for the rest of your life.
+          </p>
+        </div>
+
+        <ul class="tribute-pledges reveal mt-12" role="list" style="--d:140ms">
+          <li>
+            <svg class="icon-fill mx-auto h-3 w-3 text-brass" viewBox="0 0 100 100" aria-hidden="true"><use href="#i-star"/></svg>
+            <p>We honor your service.</p>
+          </li>
+          <li>
+            <svg class="icon-fill mx-auto h-3 w-3 text-brass" viewBox="0 0 100 100" aria-hidden="true"><use href="#i-star"/></svg>
+            <p>We respect all that you gave.</p>
+          </li>
+          <li>
+            <svg class="icon-fill mx-auto h-3 w-3 text-brass" viewBox="0 0 100 100" aria-hidden="true"><use href="#i-star"/></svg>
+            <p>We stand with you for life.</p>
+          </li>
+        </ul>
+
+        <p class="reveal mt-12" style="--d:240ms">
+          <a href="#contact" class="link-arrow">Start your own story<svg class="icon h-5 w-5" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </p>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         8. STORIES — testimonial carousel
+         TODO(TESTIMONIALS): All five cards are real stories supplied by the client (Marcus Williams, Rebecca Miller, Robert Thompson, Jasmine Carter, Michael Anderson). Replace the photo, quote, name and
+         branch/department with real, APPROVED stories, then delete each .placeholder-badge.
+         ===================================================================== -->
+    <section id="stories" class="bg-stars-light relative bg-parchment py-20 sm:py-28" aria-labelledby="stories-title">
+      <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal text-center">
+          <p class="eyebrow">In Their Words</p>
+          <h2 id="stories-title" class="heading mt-3 text-4xl sm:text-5xl">Stories of Service</h2>
+          <div class="star-divider mt-6" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#i-star"/></svg></div>
+        </div>
+
+        <div class="reveal mt-14" data-carousel role="region" aria-roledescription="carousel" aria-label="Stories of service">
+          <div class="carousel-viewport" tabindex="0" aria-label="Testimonials. Use the left and right arrow keys to change story.">
+            <ul class="carousel-track" role="list" aria-live="polite">
+
+              <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="1 of 5">
+                <article class="story-card">
+                  <figure class="story-card__photo">
+                    <!-- Story photo supplied by the client (images/story-marcus.webp, 900x1125).
+                         TODO(IMAGE): confirm you hold the rights and the person's written permission to publish this photo and story. -->
+                    <img class="photo-top" src="images/story-marcus.webp" width="900" height="1125" loading="lazy" decoding="async"
+                         alt="Marcus smiling as he rests his hand on Cooper, his golden retriever, who leans against his knee on a sunny, tree-lined park path">
+                  </figure>
+                  <div class="story-card__body p-8 sm:p-10">
+                    <span class="block font-serif text-6xl leading-none text-brass" aria-hidden="true">&ldquo;</span>
+                    <blockquote class="mt-2 space-y-4 font-serif text-lg italic leading-relaxed text-ink sm:text-xl">
+                      <p>There was a time when I stopped looking forward to going anywhere. Life had changed, and I wasn't sure how to find my way back to the things I loved. Then K9 Honor Society brought Cooper into my life.</p>
+                      <p>Now he's waiting by the door every morning, ready for our next adventure. He doesn't care about my wheelchair or the things I can't do. To him, I'm just his best friend.</p>
+                      <p>K9 Honor Society didn't just help me find a dog. They helped me find a reason to look forward to tomorrow.</p>
+                    </blockquote>
+                    <div class="mt-6 border-t border-brass pt-5">
+                      <p class="font-display text-lg uppercase tracking-[.1em]">Marcus Williams</p>
+                      <p class="text-sm font-semibold text-brass-dark">U.S. Army Veteran</p>
+                    </div>
+                  </div>
+                </article>
+              </li>
+
+              <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="2 of 5" aria-hidden="true">
+                <article class="story-card">
+                  <figure class="story-card__photo">
+                    <!-- Story photo supplied by the client (images/story-rebecca.webp, 900x1200).
+                         TODO(IMAGE): confirm you hold the rights and the person's written permission to publish this photo and story. -->
+                    <img class="photo-top" src="images/story-rebecca.webp" width="900" height="1200" loading="lazy" decoding="async"
+                         alt="Rebecca, a U.S. Navy veteran in a black &ldquo;U.S. Navy Veteran&rdquo; t-shirt, kneels and smiles beside Bailey, her Australian Shepherd wearing a stars-and-stripes bandana">
+                  </figure>
+                  <div class="story-card__body p-8 sm:p-10">
+                    <span class="block font-serif text-6xl leading-none text-brass" aria-hidden="true">&ldquo;</span>
+                    <blockquote class="mt-2 space-y-4 font-serif text-lg italic leading-relaxed text-ink sm:text-xl">
+                      <p>When I left the Navy, I missed being part of something. I missed the friendships, the routine, and having somewhere I belonged.</p>
+                      <p>When I connected with K9 Honor Society, I never imagined how much one little dog could change my life.</p>
+                      <p>Bailey has brought laughter, new friendships, and a little chaos into my everyday routine. Wherever we go, somebody stops to say hello to her.</p>
+                      <p>I thought I was just getting a companion. What I really found was a whole new chapter of my life.</p>
+                    </blockquote>
+                    <div class="mt-6 border-t border-brass pt-5">
+                      <p class="font-display text-lg uppercase tracking-[.1em]">Rebecca Miller</p>
+                      <p class="text-sm font-semibold text-brass-dark">U.S. Navy Veteran</p>
+                    </div>
+                  </div>
+                </article>
+              </li>
+              <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="3 of 5" aria-hidden="true">
+                <article class="story-card">
+                  <figure class="story-card__photo">
+                    <!-- Story photo supplied by the client (images/story-robert.webp, 900x1125).
+                         TODO(IMAGE): confirm you hold the rights and the person's written permission to publish this photo and story. -->
+                    <img src="images/story-robert.webp" width="900" height="1125" loading="lazy" decoding="async"
+                         style="object-position: 38% 0%"
+                         alt="Robert, a Vietnam veteran in a black &ldquo;Vietnam Veteran&rdquo; cap, smiles with his arm around his yellow Labrador retriever on a sunny backyard deck">
+                  </figure>
+                  <div class="story-card__body p-8 sm:p-10">
+                    <span class="block font-serif text-6xl leading-none text-brass" aria-hidden="true">&ldquo;</span>
+                    <blockquote class="mt-2 space-y-4 font-serif text-lg italic leading-relaxed text-ink sm:text-xl">
+                      <p>I've lived a long life. I've seen a lot, lost people I loved, and learned that sometimes the quietest days can feel the longest.</p>
+                      <p>Every morning, he sits beside my chair while I drink my coffee. He follows me around the house like we're still young men with places to be.</p>
+                      <p>We're both getting older, and we both move a little slower these days. But that's all right. We've got nowhere to rush.</p>
+                      <p>Thanks to K9 Honor Society, these days I don't have to enjoy life's little moments alone.</p>
+                    </blockquote>
+                    <div class="mt-6 border-t border-brass pt-5">
+                      <p class="font-display text-lg uppercase tracking-[.1em]">Robert Thompson</p>
+                      <p class="text-sm font-semibold text-brass-dark">U.S. Army Vietnam Veteran</p>
+                    </div>
+                  </div>
+                </article>
+              </li>
+              <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="4 of 5" aria-hidden="true">
+                <article class="story-card">
+                  <figure class="story-card__photo">
+                    <!-- Story photo supplied by the client (images/story-jasmine.webp, 900x1350).
+                         TODO(IMAGE): confirm you hold the rights and the person's written permission to publish this photo and story. -->
+                    <img src="images/story-jasmine.webp" width="900" height="1350" loading="lazy" decoding="async"
+                         style="object-position: 50% 0%"
+                         alt="Jasmine, a veteran in a camouflage uniform and beret, laughs as her Belgian Malinois, Koda, rises up with his paws on her arm in a sunny backyard">
+                  </figure>
+                  <div class="story-card__body p-8 sm:p-10">
+                    <span class="block font-serif text-6xl leading-none text-brass" aria-hidden="true">&ldquo;</span>
+                    <blockquote class="mt-2 space-y-4 font-serif text-lg italic leading-relaxed text-ink sm:text-xl">
+                      <p>After years of service, I knew life was going to change. What I didn't know was how much I'd miss having a sense of purpose and connection.</p>
+                      <p>K9 Honor Society helped me find Koda, and honestly, life hasn't been quiet since.</p>
+                      <p>Every time I come home, he runs toward me like I've been gone for years, even if it's only been a few hours. He makes me laugh when I don't feel like smiling.</p>
+                      <p>I thought I was giving a dog a place in my home. Turns out, he was making a much bigger place for himself in my heart.</p>
+                    </blockquote>
+                    <div class="mt-6 border-t border-brass pt-5">
+                      <p class="font-display text-lg uppercase tracking-[.1em]">Jasmine Carter</p>
+                      <p class="text-sm font-semibold text-brass-dark">U.S. Air Force Veteran</p>
+                    </div>
+                  </div>
+                </article>
+              </li>
+              <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="5 of 5" aria-hidden="true">
+                <article class="story-card">
+                  <figure class="story-card__photo">
+                    <!-- Story photo supplied by the client (images/story-michael.webp, 900x1125).
+                         TODO(IMAGE): confirm you hold the rights and the person's written permission to publish this photo and story. -->
+                    <img src="images/story-michael.webp" width="900" height="1125" loading="lazy" decoding="async"
+                         style="object-position: 50% 0%"
+                         alt="Michael, a Marine Corps veteran in a black t-shirt and khaki pants, sits on a wooded trail with his arm around Rex, a black-and-tan dog in a harness, both of them smiling">
+                  </figure>
+                  <div class="story-card__body p-8 sm:p-10">
+                    <span class="block font-serif text-6xl leading-none text-brass" aria-hidden="true">&ldquo;</span>
+                    <blockquote class="mt-2 space-y-4 font-serif text-lg italic leading-relaxed text-ink sm:text-xl">
+                      <p>I used to be the kind of guy who planned everything. In the Marines, you always knew where you needed to be and when.</p>
+                      <p>Then Rex came along and decided he had his own schedule.</p>
+                      <p>The first time I took him hiking, we were supposed to be out for thirty minutes. Two hours later, we were still in the woods because he insisted on investigating every tree, every sound, and every squirrel.</p>
+                      <p>K9 Honor Society told me they'd find a dog that matched my personality. Somehow, they found one even more stubborn than me.</p>
+                      <p>Rex has taught me something I never learned in uniform: sometimes the best moments happen when you forget the plan and just enjoy the day.</p>
+                    </blockquote>
+                    <div class="mt-6 border-t border-brass pt-5">
+                      <p class="font-display text-lg uppercase tracking-[.1em]">Michael Anderson</p>
+                      <p class="text-sm font-semibold text-brass-dark">U.S. Marine Corps Veteran</p>
+                    </div>
+                  </div>
+                </article>
+              </li>
+
+            </ul>
+          </div>
+
+          <div class="mt-8 flex items-center justify-center gap-3">
+            <button type="button" class="carousel-btn" data-carousel-prev aria-label="Previous story"><svg class="icon" aria-hidden="true"><use href="#i-chev-left"/></svg></button>
+            <div class="flex items-center" role="group" aria-label="Choose a story" data-carousel-dots></div>
+            <button type="button" class="carousel-btn" data-carousel-next aria-label="Next story"><svg class="icon" aria-hidden="true"><use href="#i-chev-right"/></svg></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         9. SUPPORT US / DONATE — full-width red-and-navy banner
+         TODO(DONATE): Add real links in script.js CONFIG (donateUrl / sponsorUrl / volunteerUrl).
+         Until then these buttons open the contact form with the right topic pre-filled.
+         TODO(LEGAL): Once confirmed, add your EIN / tax-deductibility statement here. None is claimed in this template.
+         ===================================================================== -->
+    <section id="support" class="dark-surface relative bg-glory text-white" aria-labelledby="support-title">
+      <div class="grid lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)]">
+
+        <div class="support-navy-wrap">
+          <div class="support-seam" aria-hidden="true"></div>
+          <div class="support-navy bg-navy bg-stars" aria-hidden="true"></div>
+          <div class="support-content support-left reveal">
+            <p class="eyebrow eyebrow-light">Support the Mission</p>
+            <h2 id="support-title" class="heading heading-light mt-3 text-4xl sm:text-5xl lg:text-6xl">Help Us Honor Their Service.</h2>
+            <div class="star-divider star-divider--left mt-6" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#i-star"/></svg></div>
+            <p class="mt-7 max-w-xl text-lg leading-relaxed text-white/90">
+              Your support funds the training, vetting, and placement that make every partnership possible: evaluating each dog with care, preparing both dog and handler, and standing behind every match for life.
+            </p>
+            <ul class="mt-8 flex flex-wrap gap-x-8 gap-y-3 font-display text-sm uppercase tracking-[.22em] text-brass-light" role="list">
+              <li class="flex items-center gap-2"><svg class="icon-fill h-3 w-3" viewBox="0 0 100 100" aria-hidden="true"><use href="#i-star"/></svg>Training</li>
+              <li class="flex items-center gap-2"><svg class="icon-fill h-3 w-3" viewBox="0 0 100 100" aria-hidden="true"><use href="#i-star"/></svg>Vetting</li>
+              <li class="flex items-center gap-2"><svg class="icon-fill h-3 w-3" viewBox="0 0 100 100" aria-hidden="true"><use href="#i-star"/></svg>Placement</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-stripes support-right flex flex-col justify-center">
+          <div class="reveal mx-auto flex w-full max-w-sm flex-col gap-4" style="--d:140ms">
+            <a href="#contact" class="btn btn-white" data-intent="donate" data-link="donateUrl">Donate</a>
+            <a href="#contact" class="btn btn-outline" data-intent="sponsor" data-link="sponsorUrl">Sponsor a Dog</a>
+            <a href="#contact" class="btn btn-outline" data-intent="volunteer" data-link="volunteerUrl">Volunteer</a>
+            <p class="mt-2 text-center text-sm leading-relaxed text-white">
+              Prefer to talk it through? Call <a href="tel:+18185328282" class="font-semibold underline underline-offset-4">(818) 532-8282</a>
+              or email <a href="mailto:help@k9honorsociety.com" class="font-semibold underline underline-offset-4 [overflow-wrap:anywhere]">help@k9honorsociety.com</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         10. CONTACT / APPLY
+         TODO(FORM): paste the Web3Forms access key into script.js CONFIG.web3formsAccessKey (see README).
+         Until then, submitting opens the visitor's email app with the message addressed to help@k9honorsociety.com.
+         ===================================================================== -->
+    <section id="contact" class="relative bg-white py-20 sm:py-28" aria-labelledby="contact-title">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal text-center">
+          <p class="eyebrow">Begin the Conversation</p>
+          <h2 id="contact-title" class="heading mt-3 text-4xl sm:text-5xl">Apply or Get in Touch</h2>
+          <div class="star-divider mt-6" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#i-star"/></svg></div>
+          <p class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-ink-soft">Tell us a little about yourself and how we can help. Veterans and officers can begin an application here; supporters can reach us about sponsoring or volunteering.</p>
+        </div>
+
+        <div class="mt-14 grid gap-10 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] lg:gap-12">
+
+          <!-- Form -->
+          <div class="form-card reveal p-6 sm:p-10">
+            <form id="contact-form" novalidate aria-describedby="form-note">
+              <div id="form-fields">
+                <div class="grid gap-6 sm:grid-cols-2">
+                  <div class="field">
+                    <label for="f-name">Full Name <span class="req" aria-hidden="true">*</span></label>
+                    <input class="input" id="f-name" name="name" type="text" autocomplete="name" required aria-required="true" aria-describedby="f-name-err" placeholder="Your full name">
+                    <p class="field-error" id="f-name-err"></p>
+                  </div>
+                  <div class="field">
+                    <label for="f-email">Email <span class="req" aria-hidden="true">*</span></label>
+                    <input class="input" id="f-email" name="email" type="email" autocomplete="email" required aria-required="true" aria-describedby="f-email-err" placeholder="you@example.com">
+                    <p class="field-error" id="f-email-err"></p>
+                  </div>
+                  <div class="field">
+                    <label for="f-phone">Phone</label>
+                    <input class="input" id="f-phone" name="phone" type="tel" autocomplete="tel" aria-describedby="f-phone-err" placeholder="(555) 555-5555">
+                    <p class="field-error" id="f-phone-err"></p>
+                  </div>
+                  <div class="field">
+                    <label for="f-role">I am a <span class="req" aria-hidden="true">*</span></label>
+                    <select class="input" id="f-role" name="role" required aria-required="true" aria-describedby="f-role-err">
+                      <option value="">Select one&hellip;</option>
+                      <option value="Veteran">Veteran</option>
+                      <option value="Law Enforcement Officer">Law Enforcement Officer</option>
+                      <option value="Family Member">Family Member</option>
+                      <option value="Supporter">Supporter</option>
+                    </select>
+                    <p class="field-error" id="f-role-err"></p>
+                  </div>
+                  <div class="field sm:col-span-2">
+                    <label for="f-branch">Branch / Department</label>
+                    <input class="input" id="f-branch" name="branch" type="text" autocomplete="organization" aria-describedby="f-branch-hint" placeholder="e.g. U.S. Army, or your police department">
+                    <p class="hint" id="f-branch-hint">Branch of service or law enforcement department, if applicable.</p>
+                  </div>
+                  <div class="field sm:col-span-2">
+                    <label for="f-message">Message <span class="req" aria-hidden="true">*</span></label>
+                    <textarea class="input" id="f-message" name="message" rows="5" maxlength="2000" required aria-required="true" aria-describedby="f-message-err" placeholder="How can we help? Tell us a little about yourself and what you are looking for."></textarea>
+                    <p class="field-error" id="f-message-err"></p>
+                  </div>
+                </div>
+
+                <!-- Honeypot: real visitors never see or fill this; bots do. script.js drops those submissions
+                     (and Formspree also recognises "_gotcha"). -->
+                <div class="sr-only" aria-hidden="true">
+                  <label for="f-gotcha">Leave this field empty</label>
+                  <input id="f-gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+                </div>
+                <input type="hidden" name="_subject" value="New inquiry from the K9 Honor Society website">
+
+                <div id="form-error" class="alert mt-6" role="alert" hidden></div>
+
+                <div class="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
+                  <p id="form-note" class="text-sm text-ink-soft"><span class="req text-glory" aria-hidden="true">*</span> Required fields</p>
+                  <button type="submit" class="btn btn-red w-full sm:w-auto" id="form-submit">Send Message</button>
+                </div>
+                <noscript><p class="alert mt-6">JavaScript is required to use this form. Please call (818) 532-8282 or email <a class="underline" href="mailto:help@k9honorsociety.com">help@k9honorsociety.com</a>.</p></noscript>
+              </div>
+
+              <!-- Success state (shown after a valid submission) -->
+              <div id="form-success" class="success-panel py-6" role="status" tabindex="-1" hidden>
+                <div class="success-mark" aria-hidden="true"><svg class="icon h-9 w-9" style="stroke-width:2.4"><use href="#i-check"/></svg></div>
+                <h3 class="heading mt-6 text-3xl">Thank You</h3>
+                <p id="form-success-text" class="mx-auto mt-4 max-w-md leading-relaxed text-ink-soft"></p>
+                <button type="button" id="form-reset" class="btn btn-navy btn-sm mt-8">Send Another Message</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Get in Touch card -->
+          <aside class="contact-card reveal flex flex-col p-8 sm:p-10 lg:self-start" style="--d:140ms" aria-labelledby="touch-title">
+            <div class="dark-surface">
+              <span class="mb-5 grid h-20 w-20 place-items-center rounded-full bg-white ring-2 ring-brass" aria-hidden="true"><img src="images/logo-emblem.webp" width="480" height="360" alt="" class="h-12 w-auto" loading="lazy"></span>
+              <h3 id="touch-title" class="heading heading-light text-3xl">Get in Touch</h3>
+              <div class="star-divider star-divider--left mt-4" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#i-star"/></svg></div>
+              <p class="mt-6 font-display text-2xl uppercase tracking-[.1em] text-brass-light">Voskan Azaryan</p>
+
+              <ul class="mt-6 flex flex-col gap-3" role="list">
+                <li>
+                  <a href="tel:+18185328282" class="contact-link">
+                    <span class="contact-link__icon"><svg class="icon h-5 w-5" aria-hidden="true"><use href="#i-phone"/></svg></span>
+                    <span class="text-lg font-semibold">(818) 532-8282</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:help@k9honorsociety.com" class="contact-link">
+                    <span class="contact-link__icon"><svg class="icon h-5 w-5" aria-hidden="true"><use href="#i-mail"/></svg></span>
+                    <span class="text-base font-semibold sm:text-lg">help@k9honorsociety.com</span>
+                  </a>
+                </li>
+              </ul>
+
+              <p class="mt-8 border-t border-brass/40 pt-6 leading-relaxed text-white/90">Questions about applying, sponsoring, or volunteering? Reach out — we're here to help.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =====================================================================
+       11. FOOTER
+       ===================================================================== -->
+  <footer class="dark-surface bg-stars relative bg-navy text-white">
+    <div class="footer-stripe" aria-hidden="true"></div>
+    <div class="mx-auto max-w-7xl px-4 pb-10 pt-16 sm:px-6 lg:px-8">
+      <div class="grid gap-12 lg:grid-cols-[1.4fr_.8fr_1fr]">
+
+        <div>
+          <!-- The full logo has dark-green lettering, so it sits on a white plate on the navy footer. -->
+          <a href="#home" class="inline-block rounded-2xl bg-white p-4 shadow-lg" aria-label="K9 Honor Society, back to top">
+            <img src="images/logo.webp" width="1116" height="918" alt="" class="h-44 w-auto" loading="lazy">
+          </a>
+          <p class="mt-6 max-w-md leading-relaxed text-white/90">Uniting military veterans and law enforcement officers with purpose-matched canine companions. Loyalty, trust, and partnership for those who served.</p>
+        </div>
+
+        <nav aria-label="Footer">
+          <h2 class="font-display text-sm uppercase tracking-[.28em] text-brass">Explore</h2>
+          <ul class="mt-5 grid grid-cols-2 gap-x-6 gap-y-3 lg:grid-cols-1" role="list">
+            <li><a class="footer-link" href="#mission">Our Mission</a></li>
+            <li><a class="footer-link" href="#how-it-works">How It Works</a></li>
+            <li><a class="footer-link" href="#programs">Programs</a></li>
+            <li><a class="footer-link" href="#stories">Stories</a></li>
+            <li><a class="footer-link" href="#support">Support Us</a></li>
+            <li><a class="footer-link" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2 class="font-display text-sm uppercase tracking-[.28em] text-brass">Contact: Voskan Azaryan</h2>
+          <ul class="mt-5 flex flex-col gap-3" role="list">
+            <li><a href="tel:+18185328282" class="footer-link inline-flex items-center gap-3"><svg class="icon h-5 w-5 text-brass" aria-hidden="true"><use href="#i-phone"/></svg>(818) 532-8282</a></li>
+            <li><a href="mailto:help@k9honorsociety.com" class="footer-link inline-flex items-center gap-3 [overflow-wrap:anywhere]"><svg class="icon h-5 w-5 shrink-0 text-brass" aria-hidden="true"><use href="#i-mail"/></svg>help@k9honorsociety.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-14 border-t border-brass/40 pt-8 text-center">
+        <div class="star-divider" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#i-star"/></svg></div>
+        <p class="mt-6 text-sm text-white/90">&copy; 2026 K9 Honor Society. All rights reserved.</p>
+        <p class="mt-2 font-display text-sm uppercase tracking-[.25em] text-brass">★ Proudly serving those who served ★</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button type="button" class="to-top dark-surface" id="to-top" aria-label="Back to top"><svg class="icon h-6 w-6" aria-hidden="true"><use href="#i-chev-up"/></svg></button>
+
+  <script src="script.js"></script>
+</body>
+</html>
